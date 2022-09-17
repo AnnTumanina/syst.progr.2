@@ -40,6 +40,7 @@ class Main {
         rabbit.setPriority(rabbit.Priority);
         AnimalThread turtle = new AnimalThread("Черепаха", 1);
         turtle.setName(turtle.Name);
+        turtle.setPriority(turtle.Priority);
         turtle.start();
         rabbit.start();
     }
