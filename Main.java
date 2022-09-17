@@ -4,9 +4,11 @@ import java.util.Objects;
 
 class AnimalThread extends Thread {
     public String Name;
+    public int Priority;
 
-    AnimalThread(String name) {
+    AnimalThread(String name, int priority) {
         this.Name = name;
+        this.Priority = priority;
     }
 
 
@@ -33,9 +35,10 @@ class AnimalThread extends Thread {
 
 class Main {
     public static void main(String[] args) {
-        AnimalThread rabbit = new AnimalThread("Кролик");
+        AnimalThread rabbit = new AnimalThread("Кролик", 10);
         rabbit.setName(rabbit.Name);
-        AnimalThread turtle = new AnimalThread("Черепаха");
+        rabbit.setPriority(rabbit.Priority);
+        AnimalThread turtle = new AnimalThread("Черепаха", 1);
         turtle.setName(turtle.Name);
         turtle.start();
         rabbit.start();
